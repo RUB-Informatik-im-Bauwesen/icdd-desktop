@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "icdd-desktop-application", ".\icdd-desktop-application\icdd-desktop-application.csproj", "{045959E3-75AE-4825-837D-E3DA167DC288}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICDDToolkitLibrary", ".\icdd-parser-library\ICDDToolkitLibrary.csproj", "{5DFCDFAA-036F-446C-805C-584781734B21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{045959E3-75AE-4825-837D-E3DA167DC288}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{045959E3-75AE-4825-837D-E3DA167DC288}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{045959E3-75AE-4825-837D-E3DA167DC288}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{045959E3-75AE-4825-837D-E3DA167DC288}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DFCDFAA-036F-446C-805C-584781734B21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DFCDFAA-036F-446C-805C-584781734B21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DFCDFAA-036F-446C-805C-584781734B21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DFCDFAA-036F-446C-805C-584781734B21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B86BA9B-F52A-45CF-A9F7-045BE13770A9}
+	EndGlobalSection
+EndGlobal
