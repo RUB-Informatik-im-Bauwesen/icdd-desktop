@@ -1,0 +1,19 @@
+﻿<Window x:Class="icdd_desktop_application.Editor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:icdd_desktop_application"        
+        mc:Ignorable="d"
+        ResizeMode="CanResizeWithGrip" 
+        Title="Editor" Height="450" Width="800">
+    <Viewbox Height="auto" Width="auto">
+        <Grid Height="auto" Width="794">
+            <ScrollViewer Margin="0,0,0,25">
+                <TextBox x:Name="FileTextBox" Height="386" AcceptsReturn="True" AcceptsTab="True"></TextBox>
+            </ScrollViewer>
+            <Button x:Name="buttonSave" Content="Save" HorizontalAlignment="Left" Margin="10,394,0,0" VerticalAlignment="Top" Width="75" Click="ButtonSave_Click"/>
+            <Button x:Name="buttonDiscard" Content="Discard" HorizontalAlignment="Left" Margin="90,394,0,0" VerticalAlignment="Top" Width="75" Click="ButtonDiscard_Click"/>
+        </Grid>
+    </Viewbox>
+</Window>

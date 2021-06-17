@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace icdd_parser_gui
+namespace icdd_desktop_application
 {
     /// <summary>
     /// Interaction logic for App.xaml

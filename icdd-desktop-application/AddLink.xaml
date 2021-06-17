@@ -1,0 +1,47 @@
+﻿<Window x:Class="icdd_desktop_application.AddLink"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:icdd_desktop_application"
+        mc:Ignorable="d"
+        Title="AddLink" Height="450" Width="800" SizeToContent="Height">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5,5,0,0">
+                <TextBlock Width="80"><Run Text="Linkset:"/></TextBlock>
+                <ComboBox x:Name="LinksetComboBox" Margin="5,0,0,0" Width="200"
+                          ItemsSource="{Binding Path=Linksets}" DisplayMemberPath="Name"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5,5,0,0">
+                <TextBlock Width="80"><Run Text="Type of Link:"/></TextBlock>
+                <ComboBox x:Name="LinkTypeComboBox" SelectionChanged="LinkTypeBoxChanged" DropDownClosed="LinkTypeBoxChanged" Margin="5,0,0,0" Width="200">
+                    <ComboBoxItem Content="Binary Link"/>
+                    <ComboBoxItem Content="Directed Binary Link"/>
+                    <ComboBoxItem Content="Directed Link"/>
+                    <ComboBoxItem Content="Directed 1 to N Link"/>
+                </ComboBox>
+                <ComboBox x:Name="LinkSubTypeComboBox" Margin="5,0,0,0" Width="200" Visibility="Collapsed"></ComboBox>
+            </StackPanel>
+            <Border Margin="5,5,5,5" BorderBrush="#FF003560" HorizontalAlignment="Stretch" BorderThickness="1">
+                <Grid x:Name="LinkInputPanel" HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <ScrollViewer MaxHeight="300">
+                        <StackPanel x:Name="LeftLinkElemPanel" Orientation="Vertical" Grid.Column="0" Height="auto">
+                            <Button x:Name="LeftLinkElementAdd" Height="20" Width="80" Click="ButtonAddLinkElement">Add Link Elem</Button>
+                        </StackPanel>
+                    </ScrollViewer>
+                    <ScrollViewer Grid.Column="1"  MaxHeight="300">
+                        <StackPanel x:Name="RightLinkElemPanel" Orientation="Vertical" HorizontalAlignment="Stretch" >
+                            <Button x:Name="RightLinkEelementAdd" Height="20" Width="80" Click="ButtonAddLinkElement">Add Link Elem</Button>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </Border>
+            <Button Margin="5" Width="150" HorizontalAlignment="Left" Click="ButtonAddLink">Add Link</Button>
+            </StackPanel>
+    </Grid>
+</Window>

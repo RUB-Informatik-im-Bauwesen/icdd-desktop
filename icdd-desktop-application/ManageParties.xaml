@@ -1,0 +1,33 @@
+﻿<Window x:Class="icdd_desktop_application.ManageParties"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:icdd_desktop_application"
+        mc:Ignorable="d"
+        Title="ManageParties" Height="480" Width="640">
+    <Grid>
+        <DataGrid x:Name="PartyDataGrid" ItemsSource="{Binding}" AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HeadersVisibility="All" GridLinesVisibility="None" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Type}" Header="Type" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path=Name}" Header="Name"/>
+                <DataGridTextColumn Binding="{Binding Path=Description}" Header="Description"/>
+                <DataGridTemplateColumn Header="Active" MaxWidth="45" MinWidth="45" CanUserResize="False">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <RadioButton GroupName="selectedParty" IsChecked="{Binding Path=IsPartySelected}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn CanUserResize="False" MaxWidth="50" MinWidth="50">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="ButtonEditParty" Tag="{Binding Id}" Content="Edit"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="OK" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="5,5,5,5" Click="ButtonOK"/>
+    </Grid>
+</Window>
